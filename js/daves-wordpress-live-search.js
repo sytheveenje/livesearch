@@ -96,6 +96,10 @@ LiveSearch.positionResults = function() {
 		resultsElement.css('top', searchBoxPosition.top);
 		resultsElement.css('display', 'block');
 
+		// Auto-width modification
+		var boxWidth = jQuery("input").filter("[name='s']").outerWidth();
+		resultsElement.css('width', boxWidth + 'px');
+
 		switch(DavesWordPressLiveSearchConfig.resultsDirection)
 		{
 			case 'up':
